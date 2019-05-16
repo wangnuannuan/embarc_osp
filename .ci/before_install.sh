@@ -4,7 +4,7 @@ die() {
     echo " *** ERROR: " $*
     exit 1
 }
-
+echo "start install"
 if [ "${TRAVIS}" == "true" ] ; then
     [ "${TRAVIS_OS_NAME}" != "linux" ] || {
         if [ "$STATUS" != "" ] && [ "$NAME" != "" ] ; then
