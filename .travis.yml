@@ -90,7 +90,7 @@ matrix:
       os: linux
       compiler: gcc
 
-    - env: NAME="nsim-gnu-latest" TOOLCHAIN="gnu"  BOARD="nsim" EXAMPLES="example/baremetal/blinky" EXPECTED=".ci/expected.ini"
+    - env: NAME="nsim-gnu-latest" TOOLCHAIN="gnu"  BOARD="nsim" EXAMPLES="example/baremetal/ble_hm1x" EXPECTED=".ci/expected.ini"
       os: linux
       compiler: gcc
 

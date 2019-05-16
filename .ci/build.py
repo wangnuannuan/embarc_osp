@@ -600,7 +600,6 @@ def BuildApp(app, config):
 
 
 def comment_on_pull_request(comment):
-    print(comment)
 
     pr_number = os.environ.get("TRAVIS_PULL_REQUEST")
     slug = os.environ.get("TRAVIS_REPO_SLUG")
@@ -690,10 +689,6 @@ def main(config):
 
     if not len(apps_expected_different) > 0:
         print("All the applications build as expected")
-        columns = ['TOOLCHAIN', "TOOLCHAIN_VER", 'APP', 'CONF', 'PASS']
-        expected_results = ["gnu", "2019.06", "test", "aaaa", "yes"]
-        send_pull_request_comment(columns, expected_results)
-        sys.exit(1)
     else:
         print("these applications failed with some configuration: ")
         print(apps_expected_different.keys())
