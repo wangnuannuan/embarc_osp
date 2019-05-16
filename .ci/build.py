@@ -600,6 +600,7 @@ def BuildApp(app, config):
 
 
 def comment_on_pull_request(comment):
+    print(comment)
 
     pr_number = os.environ.get("TRAVIS_PULL_REQUEST")
     slug = os.environ.get("TRAVIS_REPO_SLUG")
