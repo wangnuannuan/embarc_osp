@@ -693,6 +693,7 @@ def main(config):
         columns = ['TOOLCHAIN', "TOOLCHAIN_VER", 'APP', 'CONF', 'PASS']
         expected_results = ["gnu", "2019.06", "test", "aaaa", "yes"]
         send_pull_request_comment(columns, expected_results)
+        sys.exit(1)
     else:
         print("these applications failed with some configuration: ")
         print(apps_expected_different.keys())
