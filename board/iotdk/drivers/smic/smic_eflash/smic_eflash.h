@@ -31,14 +31,10 @@
 #define _SMIC_EFLASH_H_
 
 #include "arc_exception.h"
-#define EFLASH_CRTL_BASE 		0xF0009000
 
-
+#define EFLASH_CTRL_BASE 		0xF0009000
 #define EFLASH_BASE_ADDR0		0x00000000
-
 #define EFLASH_BASE_ADDR1		0x40000000
-
-
 
 #define SMIC_EFLASH_SET_LOCK		0
 #define SMIC_EFLASH_GET_LOCK		1
@@ -46,8 +42,8 @@
 #define SMIC_EFLASH_MACRO_ERASE		3
 #define SMIC_EFLASH_GET_INFO		4
 
-#define SMIC_EFLASH_PAGE_SIZE		1024
-#define SMIC_EFLASH_PAGE_CNT		256
+#define SMIC_EFLASH_PAGE_SIZE		512
+#define SMIC_EFLASH_PAGE_CNT		512
 
 #ifdef __cplusplus
 extern "C" {
