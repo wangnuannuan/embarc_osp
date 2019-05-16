@@ -689,7 +689,9 @@ def main(config):
 
     if not len(apps_expected_different) > 0:
         print("All the applications build as expected")
-        comment_on_pull_request("All the applications build as expected: \n"+ "\n".join(all_results.keys()))
+        columns = ['TOOLCHAIN', "TOOLCHAIN_VER", 'APP', 'CONF', 'PASS']
+        expected_results = ["gnu", "2019.06", "test", "aaaa", "yes"]
+        send_pull_request_comment(columns, expected_results)
     else:
         print("these applications failed with some configuration: ")
         print(apps_expected_different.keys())
