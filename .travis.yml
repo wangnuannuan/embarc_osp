@@ -89,8 +89,7 @@ matrix:
     - env: NAME="iotdk-gnu-latest" TOOLCHAIN="gnu" BOARD="iotdk" EXPECTED=".ci/expected.ini"
       os: linux
       compiler: gcc
-
-    - env: NAME="nsim-gnu-latest" TOOLCHAIN="gnu"  BOARD="nsim" EXPECTED=".ci/expected.ini"
+    - env: NAME="nsim-gnu-latest" TOOLCHAIN="gnu"  BOARD="nsim" EXAMPLES="example/baremetal/ble_hm1x" EXPECTED=".ci/expected.ini"
       os: linux
       compiler: gcc
 
