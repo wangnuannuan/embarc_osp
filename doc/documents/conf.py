@@ -182,7 +182,7 @@ breathe_default_project = "embARC_osp"
 intersphinx_mapping = {'https://docs.python.org/': None}
 
 linkcheck_ignore = [
-    'http://www.huamaosoft.cn/bluetooth.asp?id=1',
+    'http://www.huamaosoft.cn/',
     'http://elm-chan.org/'
 ]
 
