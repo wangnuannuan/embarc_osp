@@ -146,7 +146,11 @@ endif
 
 	NSIMDRV	= nsimdrv
 	TCFGEN  = tcfgen
+	TCFTOOL = arc-elf32-tcf-gcc
+TCFTOOL_ROOT = $(dir $(shell $(WHICH) arc-elf32-tcf-gcc))
+ifeq ($(TCFTOOL_ROOT), )
 	TCFTOOL = tcftool
+endif
 
 OPENOCD_EXECUTABLE_ROOT = $(dir $(shell $(WHICH) openocd))
 ifeq ($(OPENOCD_EXECUTABLE_ROOT), )
